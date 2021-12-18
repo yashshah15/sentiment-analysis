@@ -49,6 +49,6 @@ Sentiments:
 Mesage Count:
 {'2021-05-01': 48, '2021-05-02': 13, '2021-05-03': 29, '2021-05-04': 120, '2021-05-05': 96, '2021-05-06': 72, '2021-05-07': 135, '2021-05-08': 709, '2021-05-09': 274, '2021-05-10': 773, '2021-05-11': 249, '2021-05-12': 159, '2021-05-13': 198, '2021-05-14': 109, '2021-05-15': 77}
 ```
-The Graph generated for the result will pop up and the browserr windown on the address: http://127.0.0.1:53580/
+The Graph generated for the result will pop up and the browser window on the address: http://127.0.0.1:53580/
 ![Output plot](output.png?raw=true "Sentiment and Message count comparison")
 The above plot shows the sentiment of people compared to the count of messages from May 1 to May 15. The sentiment is neutral as shown by the graph. This is because the overall positive and negative sentiment was almost equal during the period. This may be because of the situation of the crypto market during that period
