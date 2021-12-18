@@ -35,6 +35,13 @@ def filter_text(message):
                       (w.lower() in words and w not in stop_words) or not w.isalpha())
     return result
 ```
+### Perform Sentiment analysis of only those sentences that contain the words 'Doge' or 'shib'
+```sh
+for date, list_of_messages in data.items():
+        for sentence in list_of_messages:
+            if 'DOGE' in sentence or 'SHIB' in sentence or 'doge' in sentence or 'shib' in sentence:
+                filtered_messages[date].append(TextBlob(filter_text(sentence)).sentiment[0])
+```
 ## Steps to run the project
 - Run: git clone https://github.com/yashshah15/sentiment-analysis.git
 - Run: pip install -r requirements.txt to install the required packages
