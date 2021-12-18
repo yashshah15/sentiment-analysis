@@ -76,6 +76,7 @@ if __name__ == "__main__":
     filtered_messages = defaultdict(list)
     sentiment_dict = defaultdict(float)
     number_of_messages = defaultdict(int)
+    #Relative path to the folder
     data = read_chat_json("./result.json")
     for date, list_of_messages in data.items():
         for sentence in list_of_messages:
@@ -86,6 +87,7 @@ if __name__ == "__main__":
         sentiment_dict[date] = mean(list_sentiment)
         number_of_messages[date] = len(list_sentiment)
 
+    #print the results to console
     print(sentiment_dict)
     print(number_of_messages)
 
@@ -94,12 +96,12 @@ if __name__ == "__main__":
 
     # Add traces
     fig.add_trace(
-        go.Scatter(x=list(number_of_messages.keys()), y=list(number_of_messages.values()), name="Y-Axis-1 data"),
+        go.Scatter(x=list(number_of_messages.keys()), y=list(number_of_messages.values()), name="Number of Message over time"),
         secondary_y=False,
     )
 
     fig.add_trace(
-        go.Scatter(x=list(sentiment_dict.keys()), y=list(sentiment_dict.values()), name="Y-Axis-2 data"),
+        go.Scatter(x=list(sentiment_dict.keys()), y=list(sentiment_dict.values()), name="Sentiment of messages over time"),
         secondary_y=True,
     )
 
@@ -111,7 +113,7 @@ if __name__ == "__main__":
     # Set x-axis title
     fig.update_xaxes(title_text="Date")
 
-    # Set y-axes titles
+    # Set y-axis titles
     fig.update_yaxes(title_text="Number-Of-Messages", secondary_y=False)
     fig.update_yaxes(title_text="Sentiment", secondary_y=True)
 
