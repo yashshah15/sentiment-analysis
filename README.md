@@ -1,7 +1,7 @@
 # Sentiment Analysis of Telegram Chat based on Crypto currency 
 ## Task for ISI MINDS 
 
----------------------------
+
 
 This is the repository for sentiment analysis on Telegram chat. The data is taken from the channel Crypto.com covering the messages from May 1 to May 15, 2021.
 I have downloaded the chat from the link: https://t.me/CryptoComOfficial
