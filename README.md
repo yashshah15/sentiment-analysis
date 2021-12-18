@@ -28,7 +28,12 @@ def refine_data(message_string):
     imessage_string = re.sub(r'[^\w\s]', '', message_string)
     return message_string
 ```
-
+```sh
+def filter_text(message):
+    result = " ".join(lemmatizer.lemmatize(stemmer.stem(w)) for w in nltk.wordpunct_tokenize(message) if
+                      (w.lower() in words and w not in stop_words) or not w.isalpha())
+    return result
+```
 ## Steps to run the project
 - Run: git clone https://github.com/yashshah15/sentiment-analysis.git
 - Run: pip install -r requirements.txt to install the required packages
