@@ -18,6 +18,17 @@ I have used python's Natural Language toolkit for the task. For plotting the gra
 
 All the required libraries have been mentioned in requirements.txt
 
+## Pre-processing
+To avoid any issues, I have removed all the white spaces, numbers and punctuations from the text. I have also converted the text to lower case
+```sh
+def refine_data(message_string):
+    message_string = message_string.strip()
+    message_string = message_string.lower()
+    message_string = re.sub(r'\d+', '', message_string)
+    imessage_string = re.sub(r'[^\w\s]', '', message_string)
+    return message_string
+```
+
 ## Steps to run the project
 - Run: git clone https://github.com/yashshah15/sentiment-analysis.git
 - Run: pip install -r requirements.txt to install the required packages
