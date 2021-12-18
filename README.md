@@ -28,6 +28,7 @@ def refine_data(message_string):
     imessage_string = re.sub(r'[^\w\s]', '', message_string)
     return message_string
 ```
+As required, I have filtered the messages and restricted them to English Language only.
 ```sh
 def filter_text(message):
     result = " ".join(lemmatizer.lemmatize(stemmer.stem(w)) for w in nltk.wordpunct_tokenize(message) if
