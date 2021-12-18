@@ -88,8 +88,10 @@ if __name__ == "__main__":
         number_of_messages[date] = len(list_sentiment)
 
     #print the results to console
-    print(sentiment_dict)
-    print(number_of_messages)
+    print("Sentiments:")
+    print(dict(sentiment_dict))
+    print("Message Counts:")
+    print(dict(number_of_messages))
 
     # Create figure with secondary y-axis
     fig = make_subplots(specs=[[{"secondary_y": True}]])
