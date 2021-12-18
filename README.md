@@ -14,9 +14,7 @@ I have used python's Natural Language toolkit for the task. For plotting the gra
 - plotly
 - re
 - json
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
+
 
 All the required libraries have been mentioned in requirements.txt
 
